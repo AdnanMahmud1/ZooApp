@@ -127,6 +127,8 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\Animal1Controller.cs" />
+    <Compile Include="Controllers\AnimalsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -180,6 +182,15 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Animals\Create.cshtml" />
+    <Content Include="Views\Animals\Delete.cshtml" />
+    <Content Include="Views\Animals\Details.cshtml" />
+    <Content Include="Views\Animals\Edit.cshtml" />
+    <Content Include="Views\Animals\Index.cshtml" />
+    <Content Include="Views\Animal1\Index.cshtml" />
+    <Content Include="Views\Animal1\Details.cshtml" />
+    <Content Include="Views\Animal1\Create.cshtml" />
+    <Content Include="Views\Animal1\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -193,6 +204,14 @@
     <ProjectReference Include="..\ZooApp.Models\ZooApp.Models.csproj">
       <Project>{18f0bd7f-3847-4397-802a-01ece902e077}</Project>
       <Name>ZooApp.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZooApp.Services\ZooApp.Services.csproj">
+      <Project>{28d9d257-d1f0-49d2-963c-9c2b997c0b69}</Project>
+      <Name>ZooApp.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZooApp.ViewModels\ZooApp.ViewModels.csproj">
+      <Project>{D34D0005-AE29-4683-9747-22DF31FE4DC5}</Project>
+      <Name>ZooApp.ViewModels</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
