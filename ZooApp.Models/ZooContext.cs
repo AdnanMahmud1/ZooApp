@@ -15,7 +15,9 @@ namespace ZooApp.Models
         }
 
         public DbSet<Animal> Animals { set; get; }
+        public DbSet<Food> Foods { get; set; }
+        public DbSet<AnimalFood> AnimalFoods { get; set; }
 
-       
+        
     }
 }

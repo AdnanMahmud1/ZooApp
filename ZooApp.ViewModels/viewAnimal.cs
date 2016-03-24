@@ -10,8 +10,13 @@ namespace ZooApp.ViewModels
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Food { get; set; }
-        public string Origin { get; set; }
+       public string Origin { get; set; }
         public int Quantity { get; set; }
+    }
+
+    public class ViewFood
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
     }
 }

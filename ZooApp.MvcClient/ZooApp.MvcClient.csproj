@@ -129,6 +129,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\Animal1Controller.cs" />
     <Compile Include="Controllers\AnimalsController.cs" />
+    <Compile Include="Controllers\FoodsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -187,6 +188,11 @@
     <Content Include="Views\Animals\Details.cshtml" />
     <Content Include="Views\Animals\Edit.cshtml" />
     <Content Include="Views\Animals\Index.cshtml" />
+    <Content Include="Views\Foods\Details.cshtml" />
+    <Content Include="Views\Foods\Edit.cshtml" />
+    <Content Include="Views\Foods\Delete.cshtml" />
+    <Content Include="Views\Foods\Create.cshtml" />
+    <Content Include="Views\Foods\Index.cshtml" />
     <Content Include="Views\Animal1\Index.cshtml" />
     <Content Include="Views\Animal1\Details.cshtml" />
     <Content Include="Views\Animal1\Create.cshtml" />

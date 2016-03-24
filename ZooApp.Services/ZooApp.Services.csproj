@@ -50,6 +50,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnimalService.cs" />
+    <Compile Include="DataAccess\FoodRepository.cs" />
+    <Compile Include="DataAccess\GenericRepository.cs" />
+    <Compile Include="DataAccess\IFoodRepository.cs" />
+    <Compile Include="DataAccess\IGenericRepository.cs" />
+    <Compile Include="FoodService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
