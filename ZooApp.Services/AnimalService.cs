@@ -18,10 +18,10 @@ namespace ZooApp.Services
             List<ViewAnimal> animals = db.Animals.Select(s => new ViewAnimal()
             {
                 Id = s.Id,
-                Quantity = s.Quantity,
+                //Quantity = s.Quantity,
                 Origin = s.Origin,
                 Name = s.Name,
-                Food = s.Food
+                //Food = s.Food
             }).ToList();
             return animals;
         }
@@ -29,7 +29,7 @@ namespace ZooApp.Services
         public ViewAnimal GetAnimal(int id)
         {
             Animal animal = db.Animals.Find(id);
-            return new ViewAnimal { Food = animal.Food, Quantity = animal.Quantity, Origin = animal.Origin, Name = animal.Name, Id = animal.Id };
+            return new ViewAnimal {Origin = animal.Origin, Name = animal.Name, Id = animal.Id };
         }
 
         public bool Save(Animal animal)
