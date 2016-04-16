@@ -3,11 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ZooApp.Models;
 
 namespace ZooApp.ViewModels
 {
     public class ViewAnimal
     {
+        public ViewAnimal(Animal animal)
+        {
+            Id = animal.Id;
+            Name = animal.Name;
+            Origin = animal.Origin;
+            Quantity = animal.Quantity;
+        }
+
+       
+
         public int Id { get; set; }
         public string Name { get; set; }
        public string Origin { get; set; }
@@ -16,6 +27,11 @@ namespace ZooApp.ViewModels
 
     public class ViewFood
     {
+        public ViewFood(Food food)
+        {
+            Id = food.Id;
+            Name = food.Name;
+        }
         public int Id { get; set; }
         public string Name { get; set; }
     }

@@ -14,22 +14,21 @@ namespace ZooApp.Services
         ZooContext db = new ZooContext();
         public List<ViewAnimal> GetAll()
         {
+            List<ViewAnimal> animals=db.Animals.AsEnumerable().Select(s=>new ViewAnimal(s)).ToList();
+            //List<ViewAnimal> animals;
+            //foreach (var animal in db.Animals)
+            //{
+            //    var viewAnimal = new ViewAnimal(animal);
+            //    animals.Add(viewAnimal);
+            //}
 
-            List<ViewAnimal> animals = db.Animals.Select(s => new ViewAnimal()
-            {
-                Id = s.Id,
-                Quantity = s.Quantity,
-                Origin = s.Origin,
-                Name = s.Name,
-                //Food = s.Food
-            }).ToList();
             return animals;
         }
 
         public ViewAnimal Get(int id)
         {
             Animal animal = db.Animals.Find(id);
-            return new ViewAnimal {Origin = animal.Origin, Name = animal.Name, Id = animal.Id,Quantity = animal.Quantity};
+            return new ViewAnimal (animal);
         }
 
         public bool Save(Animal animal)

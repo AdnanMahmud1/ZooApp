@@ -22,19 +22,14 @@ namespace ZooApp.Services
         public List<ViewFood> GetAll()
         {
 
-            var animals =_foodRepository.GetAll().Select(s => new ViewFood
-            {
-                Id = s.Id,
-              Name = s.Name
-               
-            }).ToList();
+            var animals =_foodRepository.GetAll().AsEnumerable().Select(s => new ViewFood(s)).ToList();
             return animals;
         }
 
         public ViewFood Get(int id)
         {
-            Food animal = _foodRepository.GetFood(id);
-            return new ViewFood {Name = animal.Name, Id = animal.Id };
+            Food food = _foodRepository.GetFood(id);
+            return new ViewFood (food);
         }
 
         public bool Save(Food animal)
