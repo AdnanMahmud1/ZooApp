@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using ZooApp.Models;
+using ZooApp.ViewModels;
 
 namespace ZooApp.MvcClient.Controllers
 {
@@ -18,7 +19,13 @@ namespace ZooApp.MvcClient.Controllers
         public ActionResult Index()
         {
             var animalFoods = db.AnimalFoods.Include(a => a.Animal).Include(a => a.Food);
-            return View(animalFoods.ToList());
+            var viewFoodTotals = new List<ViewFoodTotal>();
+            foreach (var animalFood in animalFoods)
+            {
+                ViewFoodTotal viewFoodTotal=new ViewFoodTotal(animalFood);
+                viewFoodTotals.Add(viewFoodTotal);
+            }
+            return View(viewFoodTotals);
         }
 
         // GET: AnimalFoods/Details/5

@@ -14,6 +14,8 @@ namespace ZooApp.Models
         [Index("Ix_FoodName")]
         public string Name { get; set; }
 
+        public double Price { get; set; }
+        
         public virtual ICollection<AnimalFood> AnimalFoods  { get; set; }
     }
 }
